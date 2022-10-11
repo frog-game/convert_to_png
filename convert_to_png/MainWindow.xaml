@@ -1,0 +1,37 @@
+﻿<Window x:Class="convert_to_png.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:convert_to_png"
+        mc:Ignorable="d"
+        Title="资源转换器" Height="800" Width="1000">
+    <Grid>
+        <Canvas Name="abc">
+            <Image Height="787" Source="/Image/背景.png" Stretch="Fill" Width="1000" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0">
+                <UIElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </UIElement.RenderTransform>
+            </Image>
+        </Canvas>
+
+        <Button x:Name="btnRefresh" HorizontalContentAlignment="Right"  Click="btnRefresh_Click" Margin="31,-60,757,550" RenderTransformOrigin="0.839,0.512">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image  Width="90" Height="90" Source="/Image/开始.png" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
