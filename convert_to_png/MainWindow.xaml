@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:convert_to_png"
         mc:Ignorable="d"
-        Title="资源转换器" Height="800" Width="1000">
+        Title="资源转换器" Height="800" Width="1000" Loaded="Window_Loaded">
     <Grid>
-        <Canvas Name="abc">
+        <Canvas Name="Background">
             <Image Height="787" Source="/Image/背景.png" Stretch="Fill" Width="1000" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0">
                 <UIElement.RenderTransform>
                     <TransformGroup>
@@ -20,7 +20,7 @@
             </Image>
         </Canvas>
 
-        <Button x:Name="btnRefresh" HorizontalContentAlignment="Right"  Click="btnRefresh_Click" Margin="31,-60,757,550" RenderTransformOrigin="0.839,0.512">
+        <Button x:Name="btnStart" HorizontalContentAlignment="Right"  Click="BtnStart_Click" Margin="31,-60,757,550" RenderTransformOrigin="0.839,0.512">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
@@ -33,5 +33,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <ProgressBar Height="20" HorizontalAlignment="Left" Margin="9,161,0,0" Name="taskProgress" VerticalAlignment="Top" Width="243" />
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding ElementName=taskProgress, Path=Value, StringFormat={}{0:0}%}" Margin="112,165,0,0"></TextBlock>
     </Grid>
 </Window>

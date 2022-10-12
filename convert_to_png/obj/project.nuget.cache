@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZamglTLifzNBGexG/k21wodfTBeZ/0BkV+KQnKUraizb+Z9zLPrtvzxeKni+1uYe6YcDgXi0M4ZeKmZ8IKXGfA==",
+  "dgSpecHash": "47WutjXa4/3Fj/Ke0icWvGLQKRrZR5AG3/7Tolay8xRkWMuoLZvR8GRFfYlXeLmDtlB78NiOzw6HxTqL2W/Vmg==",
   "success": true,
   "projectFilePath": "D:\\github-work\\convert_to_png\\convert_to_png\\convert_to_png.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\npoi\\2.5.6\\npoi.2.5.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\openmcdf\\2.2.1.12\\openmcdf.2.2.1.12.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",

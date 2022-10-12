@@ -1,16 +1,9 @@
-﻿using Microsoft.Win32;
-using NPOI.HPSF;
-using OpenMcdf;
+﻿using ConvertToPng;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Windows;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System.Drawing;
-using System.Windows.Media.Media3D;
-using System.Windows.Controls;
-using Microsoft.WindowsAPICodePack.Dialogs;
-using ConvertToPng;
 
 namespace convert_to_png
 {
@@ -24,18 +17,33 @@ namespace convert_to_png
             InitializeComponent();
         }
 
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+   
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Helper_FlieLogic.createTaskProgress(this);
+        }
+
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new CommonOpenFileDialog();
             dialog.IsFolderPicker = true;
             CommonFileDialogResult result = dialog.ShowDialog();
             if (result == CommonFileDialogResult.Ok)
             {
-                Helper_3dFile.loadAll3dMaxFile(dialog.FileName);
-                Helper_3dFile.all3dMaxFileConvertToPng();
+                if (Path.GetFileNameWithoutExtension(dialog.FileName) == "max")
+                {
+                    Helper_FlieLogic.start3dMaxProcess(dialog.FileName);
+                }
 
+                else if (Path.GetFileNameWithoutExtension(dialog.FileName) == "blend")
+                {
+                    Helper_FlieLogic.startBlendProcess(dialog.FileName);
+                }
+                else
+                {
+                    Helper_FlieLogic.startAllProcess(dialog.FileName);
+                }
             }
-
         }
     }
 }
